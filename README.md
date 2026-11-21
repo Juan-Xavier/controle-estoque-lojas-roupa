@@ -85,10 +85,10 @@ As relações apresentadas são hipóteses de valor derivadas da proposta funcio
 
 ## 6. Publicação no GitHub Pages
 
-A página está publicada a partir do arquivo estático `index.html`, localizado na raiz do repositório. O GitHub Pages está configurado para publicar a branch `main` pela pasta `/(root)`.
+A página é publicada pelo workflow `.github/workflows/pages.yml`, utilizando GitHub Actions. O workflow já concluiu uma implantação com sucesso.
 
 Endereço do site: https://juan-xavier.github.io/controle-estoque-lojas-roupa/
 
-Sempre que houver atualização na branch `main`, o GitHub Pages reconstruirá e publicará o site automaticamente.
+Sempre que houver atualização na branch `main`, o workflow executará novamente as etapas de preparação e publicação do site.
 
-> **Status:** publicação confirmada pelo workflow de Pages do GitHub, com as etapas de construção e implantação concluídas com sucesso.
+> **Status:** GitHub Pages ativado e implantação concluída com sucesso. Consulte a aba **Actions** para acompanhar novas publicações.
