@@ -92,3 +92,11 @@ Endereço do site: https://juan-xavier.github.io/controle-estoque-lojas-roupa/
 Sempre que houver atualização na branch `main`, o workflow executará novamente as etapas de preparação e publicação do site.
 
 > **Status:** GitHub Pages ativado e implantação concluída com sucesso. Consulte a aba **Actions** para acompanhar novas publicações.
+
+## Modelagem de Casos de Uso
+
+- [Diagrama visual de casos de uso (SVG)](docs/Diagrama_Casos_de_Uso_Controle_Estoque.svg)
+- [Fonte editável PlantUML](docs/Diagrama_Casos_de_Uso_Controle_Estoque.puml)
+- [Catálogo e descrição completa do UC06 — Registrar venda ou saída de peça](docs/Descricao_Casos_de_Uso_Controle_Estoque.md)
+
+O documento inclui os atores, os casos de uso identificados, os relacionamentos `<<include>>`, os fluxos principal e alternativos do UC06 e os pontos que ainda precisam ser validados pelo grupo.
