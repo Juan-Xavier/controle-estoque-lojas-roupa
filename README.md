@@ -85,12 +85,16 @@ As relações apresentadas são hipóteses de valor derivadas da proposta funcio
 
 ## 6. Publicação no GitHub Pages
 
-Este projeto usa o arquivo estático `index.html` na raiz do repositório.
+A página está implementada no arquivo `index.html`. O repositório também contém o workflow `.github/workflows/pages.yml`, que envia automaticamente o site ao GitHub Pages sempre que houver atualização na branch `main`.
+
+Para ativar a publicação pela primeira vez:
 
 1. Abra **Settings → Pages** no repositório.
-2. Em **Build and deployment**, escolha **Deploy from a branch**.
-3. Selecione a branch `main` e a pasta `/(root)`.
-4. Clique em **Save** e aguarde o GitHub concluir a publicação.
-5. Confirme o endereço disponibilizado pela própria tela de Pages.
+2. Em **Build and deployment → Source**, selecione **GitHub Actions** e salve.
+3. Abra a aba **Actions** e selecione o workflow **Publicar site no GitHub Pages**.
+4. Clique em **Run workflow** na branch `main` para iniciar a primeira publicação (ou faça um novo commit na `main`).
+5. Quando o workflow terminar com sucesso, confira o endereço publicado na tela **Settings → Pages**.
 
-> **Status:** repositório público criado e arquivos do projeto enviados. A publicação do GitHub Pages depende da ativação em **Settings → Pages**.
+Endereço esperado: https://juan-xavier.github.io/controle-estoque-lojas-roupa/
+
+> **Status:** repositório público e arquivos enviados. O workflow de publicação está preparado; a primeira ativação do GitHub Pages ainda exige selecionar **GitHub Actions** em **Settings → Pages**.
