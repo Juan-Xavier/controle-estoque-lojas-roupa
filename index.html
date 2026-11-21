@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Projeto acadêmico de software web e mobile para controle de estoque de roupas, disponibilidade por tamanho e localização física das peças.">
+  <title>Estoque em Foco | Controle de Estoque para Lojas de Roupas</title>
+  <style>
+    :root{--navy:#102b3f;--blue:#18577c;--teal:#137d75;--paper:#f5f8fa;--ink:#172732;--muted:#5c6e79;--line:#dce5e9;--white:#fff;--mint:#e7f4f1;--ice:#eaf2f7;--shadow:0 14px 40px rgba(16,43,63,.08)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.65}
+    a{color:var(--blue)}.wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+    header{background:var(--navy);color:#fff;position:sticky;top:0;z-index:5}.nav{min-height:66px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-weight:800;letter-spacing:.04em;font-size:.9rem}.navlinks{display:flex;gap:20px;flex-wrap:wrap}.navlinks a{color:#d9e9ef;text-decoration:none;font-size:.88rem}.navlinks a:hover{color:#fff;text-decoration:underline}
+    .hero{background:radial-gradient(circle at 85% 15%,rgba(19,125,117,.38),transparent 30%),linear-gradient(125deg,#102b3f,#18577c);color:#fff;padding:88px 0 82px}.eyebrow,.kicker{font-size:.75rem;text-transform:uppercase;letter-spacing:.15em;font-weight:850;color:#78d0c3}.hero h1{max-width:850px;font-size:clamp(2.4rem,6vw,4.8rem);line-height:1.04;letter-spacing:-.045em;margin:14px 0 20px}.lead{max-width:780px;color:#e2eef3;font-size:1.18rem}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.btn{padding:12px 18px;border-radius:999px;font-weight:750;text-decoration:none;display:inline-block}.btn.light{background:#fff;color:var(--navy)}.btn.outline{border:1px solid #9db9c8;color:white}.hero-note{margin-top:24px;color:#c5dce6;font-size:.88rem}
+    section{padding:72px 0}.tint{background:#edf3f6}.head{max-width:780px;margin-bottom:30px}.head .kicker{color:var(--teal)}h2{font-size:clamp(1.8rem,3.4vw,2.8rem);line-height:1.14;letter-spacing:-.03em;margin:8px 0 14px}.head p,.muted{color:var(--muted)}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{padding:24px;background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow)}.num{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;background:var(--ice);color:var(--blue);font-weight:900;margin-bottom:14px}.card h3{margin:0 0 8px;line-height:1.3}.card p{color:var(--muted);margin:0}
+    .callout{padding:22px 24px;border-left:4px solid var(--teal);border-radius:0 14px 14px 0;background:#fff;margin-top:22px;color:var(--muted)}.callout strong{color:var(--ink)}
+    .two{display:grid;grid-template-columns:1fr 1fr;gap:22px}.panel{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:var(--shadow)}.panel h3{margin-top:0}.pill{display:inline-block;padding:4px 10px;border-radius:999px;background:var(--mint);color:#12645e;font-size:.75rem;font-weight:850;margin-bottom:12px}
+    .pyramid{display:flex;flex-direction:column;gap:8px;align-items:center;margin:24px auto;max-width:650px}.layer{padding:13px 18px;text-align:center;border:1px solid var(--line);border-radius:10px;background:#fff;box-shadow:0 5px 18px rgba(16,43,63,.05)}.layer strong{display:block;color:var(--blue)}.layer span{font-size:.88rem;color:var(--muted)}.w1{width:55%}.w2{width:68%}.w3{width:81%}.w4{width:93%}.w5{width:100%}.b2c .layer strong{color:var(--teal)}.b2c .layer{border-color:#c9e4df}
+    .value-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:18px}.value{border:1px solid var(--line);border-radius:14px;padding:16px;background:#fff}.value b{display:block;margin-bottom:4px}.value span{font-size:.92rem;color:var(--muted)}
+    .table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:#fff}table{border-collapse:collapse;width:100%;min-width:650px}th,td{text-align:left;padding:13px 15px;border-bottom:1px solid var(--line);vertical-align:top}th{background:#e8f0f5;color:#173b51;font-size:.86rem}td{font-size:.92rem}tr:last-child td{border-bottom:0}
+    footer{background:var(--navy);color:#d9e9ef;padding:34px 0}.foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}.foot a{color:#8ed9cf}.small{font-size:.88rem;color:var(--muted)}
+    @media(max-width:800px){.grid,.two{grid-template-columns:1fr}.nav{align-items:flex-start;flex-direction:column;padding:14px 0}.navlinks{gap:12px}.hero{padding:64px 0}.value-grid{grid-template-columns:1fr}}@media(max-width:520px){.wrap{width:calc(100% - 28px)}section{padding:54px 0}.w1{width:72%}.w2{width:82%}.w3{width:91%}}
+  </style>
+</head>
+<body>
+<header><div class="wrap nav">
+  <div class="brand">ESTOQUE EM FOCO · ENGENHARIA DE SOFTWARE</div>
+  <nav class="navlinks"><a href="#proposta">Proposta</a><a href="#b2b">Valor B2B</a><a href="#b2c">Valor B2C</a><a href="#repositorio">Documentação</a></nav>
+</div></header>
+<main>
+  <section class="hero" id="proposta"><div class="wrap">
+    <div class="eyebrow">Projeto acadêmico · proposta inicial</div>
+    <h1>O estoque certo, no tamanho certo, no lugar certo.</h1>
+    <p class="lead">Um sistema web e mobile para dar visibilidade à disponibilidade de roupas por modelo, cor, tamanho e localização física, apoiando o atendimento e a operação diária de lojas.</p>
+    <div class="actions"><a class="btn light" href="#funcionamento">Conheça a solução</a><a class="btn outline" href="#b2b">Análise de valor B2B e B2C</a></div>
+    <p class="hero-note">A loja usa a solução para ganhar controle e eficiência. A cliente percebe o benefício em um atendimento mais ágil.</p>
+  </div></section>
+
+  <section id="funcionamento"><div class="wrap">
+    <div class="head"><div class="kicker">01 · Proposta informal</div><h2>Controle diário de disponibilidade, sem perder tempo procurando peças</h2>
+      <p>A ideia é centralizar as informações do estoque físico em uma solução acessível pela web e por aplicativo mobile, para que a equipe saiba o que está disponível e onde encontrar cada peça.</p></div>
+    <div class="grid">
+      <article class="card"><div class="num">1</div><h3>Abertura do expediente</h3><p>A lojista ou vendedora registra ou faz a leitura das peças disponíveis, separando modelo, cor, tamanho (PP, P, M, G, GG etc.), quantidade e localização inicial.</p></article>
+      <article class="card"><div class="num">2</div><h3>Consulta durante o atendimento</h3><p>A equipe consulta rapidamente quantas unidades existem de cada tamanho e onde a peça está: arara, vitrine, prateleira, bolsa ou depósito.</p></article>
+      <article class="card"><div class="num">3</div><h3>Movimentações e saídas</h3><p>Vendas, retiradas, reposições e transferências são registradas para atualizar o saldo e a localização, mantendo o estoque consultável mais confiável.</p></article>
+    </div>
+    <div class="callout"><strong>Fechamento do dia:</strong> o sistema apoia a comparação entre o saldo registrado, as movimentações e a contagem física. As divergências alimentam um Score de Acurácia da loja. A fórmula desse indicador ainda precisa ser definida e validada com os responsáveis pela operação.</div>
+  </div></section>
+
+  <section class="tint" id="b2b"><div class="wrap">
+    <div class="head"><div class="kicker">02 · Pirâmide de valor B2B</div><h2>Valor principal: eficiência e controle para o negócio</h2>
+      <p>O cliente direto do software é a empresa varejista, por meio do proprietário ou gestor que decide adotar a solução. A análise B2B é, portanto, a principal: descreve o valor para a organização e seus usuários internos.</p></div>
+    <div class="pyramid">
+      <div class="layer w1"><strong>Inspiracional</strong><span>Não atribuído: a proposta ainda não descreve impacto de propósito ou responsabilidade social.</span></div>
+      <div class="layer w2"><strong>Individual</strong><span>Redução da ansiedade para vendedores e gestores, pela confiança nas informações.</span></div>
+      <div class="layer w3"><strong>Facilidade de fazer negócios</strong><span>Economia de tempo, menos esforço, organização, informação e redução de transtornos.</span></div>
+      <div class="layer w5"><strong>Funcional</strong><span>Redução de custos, melhoria potencial da receita e redução de riscos.</span></div>
+    </div>
+    <div class="value-grid">
+      <div class="value"><b>Atender às especificações</b><span>Registrar estoque por modelo, cor, tamanho, quantidade e localização em web e mobile.</span></div>
+      <div class="value"><b>Redução de custos</b><span>Diminuir o tempo de procura e o retrabalho de conferências manuais; a economia deverá ser medida em uso real.</span></div>
+      <div class="value"><b>Melhoria potencial da receita</b><span>Evitar perder vendas por demora ou falta de informação sobre o tamanho disponível.</span></div>
+      <div class="value"><b>Economia de tempo e esforço</b><span>Encontrar rapidamente a unidade e sua localização, reduzindo buscas pela loja.</span></div>
+      <div class="value"><b>Informação e transparência</b><span>Dar visibilidade a quantidades, tamanhos, locais e divergências de estoque.</span></div>
+      <div class="value"><b>Organização e integração</b><span>Organizar o estoque por variação e manter web e mobile sobre os mesmos dados.</span></div>
+      <div class="value"><b>Redução de riscos</b><span>Reduzir decisões baseadas em saldos incorretos e o risco de não localizar uma peça disponível no sistema.</span></div>
+      <div class="value"><b>Redução da ansiedade</b><span>Dar mais confiança a vendedores e gestores durante a operação e o atendimento.</span></div>
+    </div>
+    <p class="small">Não foram atribuídos valores como visão, esperança, responsabilidade social, reputação profissional ou compromisso de suporte, pois dependem de resultados ou serviços ainda não descritos.</p>
+  </div></section>
+
+  <section id="b2c"><div class="wrap">
+    <div class="head"><div class="kicker">03 · Pirâmide de valor B2C</div><h2>Valor complementar: uma experiência de compra mais fluida</h2>
+      <p>A cliente da loja não é, na proposta atual, compradora nem usuária direta do sistema. Ela recebe benefícios indiretos na experiência de atendimento: menos espera e informação mais confiável sobre o produto e tamanho procurados.</p></div>
+    <div class="pyramid b2c">
+      <div class="layer w2"><strong>Transformador</strong><span>Não atribuído: não há evidência de mudança de vida ou autorrealização.</span></div>
+      <div class="layer w3"><strong>Emocional</strong><span>Redução da ansiedade ao receber resposta clara sobre a disponibilidade.</span></div>
+      <div class="layer w5"><strong>Funcional</strong><span>Economia de tempo, menos esforço, menos transtornos e informação confiável.</span></div>
+    </div>
+    <div class="value-grid">
+      <div class="value"><b>Economiza tempo</b><span>A cliente recebe resposta rápida sobre a disponibilidade do tamanho sem aguardar uma busca longa.</span></div>
+      <div class="value"><b>Reduz esforço</b><span>Não precisa acompanhar a equipe em várias buscas nem repetir a solicitação em diferentes locais.</span></div>
+      <div class="value"><b>Evita transtornos</b><span>A localização registrada ajuda a equipe a encontrar a peça com menos idas e vindas.</span></div>
+      <div class="value"><b>Informa</b><span>A vendedora consegue transmitir uma informação mais confiável sobre tamanhos e quantidades.</span></div>
+      <div class="value"><b>Reduz ansiedade</b><span>Menos incerteza sobre conseguir experimentar ou comprar o tamanho desejado.</span></div>
+    </div>
+    <div class="callout"><strong>Por que separar B2B e B2C?</strong> A loja adota e administra a solução pela eficiência e pelo controle. A cliente final sente o benefício de forma indireta, na agilidade e na qualidade do atendimento.</div>
+  </div></section>
+
+  <section class="tint"><div class="wrap">
+    <div class="head"><div class="kicker">04 · Síntese</div><h2>Uma proposta inicial, aberta à validação</h2>
+      <p>A análise de valor representa hipóteses fundamentadas nas funcionalidades descritas. Ainda é necessário conversar com representantes das partes interessadas e observar o uso real.</p></div>
+    <div class="two">
+      <article class="panel"><span class="pill">Valor B2B · principal</span><h3>Para a loja</h3><p class="muted">Estoque mais organizado, visível e confiável; economia de tempo operacional; apoio ao atendimento; e redução de riscos de divergência e perda de vendas por falta de informação.</p></article>
+      <article class="panel"><span class="pill">Valor B2C · indireto</span><h3>Para a cliente</h3><p class="muted">Atendimento mais ágil, informação mais confiável e menos espera para localizar o modelo e o tamanho desejados.</p></article>
+    </div>
+    <p class="small" style="margin-top:22px">Pontos a definir: método de leitura das peças, limites dos alertas, integração com caixa/ERP, permissões de usuário e fórmula matemática do Score de Acurácia.</p>
+  </div></section>
+
+  <section id="repositorio"><div class="wrap">
+    <div class="head"><div class="kicker">05 · Documentação</div><h2>Consulte a documentação e acompanhe o projeto</h2><p>O repositório reúne a proposta informal, a análise das pirâmides de valor e as referências utilizadas.</p></div>
+    <div class="actions"><a class="btn" style="background:var(--navy);color:#fff" href="https://github.com/Juan-Xavier/controle-estoque-lojas-roupa">Abrir repositório no GitHub</a><a class="btn" style="background:var(--mint);color:#12645e" href="README.md">Ler documentação README</a></div>
+    <h3 style="margin-top:34px">Referências</h3>
+    <ul class="muted">
+      <li>Bain & Company — <a href="https://media.bain.com/elements-of-value/">The Elements of Value (B2C)</a>.</li>
+      <li>Bain & Company — <a href="https://media.bain.com/b2b-eov/index.html">The B2B Elements of Value</a>.</li>
+      <li>Almquist, Eric; Cleghorn, Jamie; Sherer, Lori. <a href="https://hbr.org/2018/03/the-b2b-elements-of-value">The B2B Elements of Value</a>. Harvard Business Review, março de 2018.</li>
+    </ul>
+    <p class="small">Projeto acadêmico de Engenharia de Software. As relações entre funcionalidades e elementos de valor são hipóteses e ainda não foram validadas com entrevistas ou testes com clientes.</p>
+  </div></section>
+</main>
+<footer><div class="wrap" style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap"><div><strong>Estoque em Foco</strong><br><span>Controle de Estoque para Lojas de Roupas · Projeto acadêmico</span></div><div><a href="https://github.com/Juan-Xavier/controle-estoque-lojas-roupa" style="color:#8ed9cf">Repositório no GitHub</a></div></div></footer>
+</body></html>
