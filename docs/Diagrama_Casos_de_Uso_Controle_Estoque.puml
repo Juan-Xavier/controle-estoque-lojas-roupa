@@ -1,0 +1,76 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+skinparam shadowing false
+skinparam usecase {
+  BackgroundColor #F7FBFF
+  BorderColor #245B78
+  ArrowColor #425466
+}
+skinparam actor {
+  BorderColor #173B53
+  FontColor #173B53
+}
+skinparam rectangle {
+  BorderColor #173B53
+  FontColor #173B53
+}
+
+actor "Proprietário(a)" as Proprietario
+actor "Gerente" as Gerente
+actor "Vendedor(a) / Atendente" as Vendedor
+actor "Estoquista / Repositor(a)" as Estoquista
+actor "Financeiro" as Financeiro
+
+rectangle "Sistema de Controle de Estoque para Lojas de Roupas" {
+  usecase "Cadastrar produtos e\nvariações (modelo, cor e tamanho)" as UC01
+  usecase "Configurar locais físicos\nda loja" as UC02
+  usecase "Registrar estoque inicial\n(abertura do expediente)" as UC03
+  usecase "Consultar disponibilidade\npor modelo, cor e tamanho" as UC04
+  usecase "Consultar localização\nfísica da peça" as UC05
+  usecase "Registrar venda ou\nsaída de peça" as UC06
+  usecase "Registrar entrada ou\nreposição de peça" as UC07
+  usecase "Transferir peça entre\nlocais da loja" as UC08
+  usecase "Receber alerta de estoque\nbaixo / última unidade" as UC09
+  usecase "Registrar contagem\nfísica do estoque" as UC10
+  usecase "Realizar fechamento\ndiário do estoque" as UC11
+  usecase "Consultar relatórios e\nScore de Acurácia" as UC12
+  usecase "Consultar histórico de\nmovimentações" as UC13
+  usecase "Comparar saldo registrado\ncom contagem física" as UC14
+  usecase "Calcular Score\nde Acurácia" as UC15
+}
+
+' Associações entre atores e casos de uso
+Proprietario -- UC12
+Gerente -- UC01
+Gerente -- UC02
+Gerente -- UC03
+Gerente -- UC04
+Gerente -- UC06
+Gerente -- UC08
+Gerente -- UC09
+Gerente -- UC10
+Gerente -- UC11
+Gerente -- UC12
+Gerente -- UC13
+Vendedor -- UC04
+Vendedor -- UC05
+Vendedor -- UC06
+Vendedor -- UC08
+Vendedor -- UC09
+Estoquista -- UC02
+Estoquista -- UC03
+Estoquista -- UC04
+Estoquista -- UC05
+Estoquista -- UC07
+Estoquista -- UC08
+Estoquista -- UC09
+Estoquista -- UC10
+Financeiro -- UC12
+Financeiro -- UC13
+
+' O fechamento inclui obrigatoriamente contagem, comparação e cálculo do score
+UC11 ..> UC10 : <<include>>
+UC11 ..> UC14 : <<include>>
+UC11 ..> UC15 : <<include>>
+@enduml
