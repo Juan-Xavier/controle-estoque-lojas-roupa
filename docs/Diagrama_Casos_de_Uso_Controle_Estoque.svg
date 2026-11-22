@@ -1,46 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1100" viewBox="0 0 1600 1100">
-<rect width="100%" height="100%" fill="#ffffff"/>
-<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#137d75"/></marker></defs>
-<rect x="250" y="45" width="1100" height="1000" rx="14" fill="#fbfdff" stroke="#173b53" stroke-width="3"/>
-<text x="800" y="83" font-family="Arial, sans-serif" font-size="25" font-weight="bold" text-anchor="middle" fill="#173b53">Sistema de Controle de Estoque para Lojas de Roupas</text>
-<path d="M 133 300 C 193 300, 958 715, 1058 715" fill="none" stroke="#9aaab4" stroke-width="1.15" opacity="0.38"/>
-<path d="M 133 585 C 193 585, 218 190, 318 190 M 133 585 C 193 585, 588 190, 688 190 M 133 585 C 193 585, 958 190, 1058 190 M 133 585 C 193 585, 218 365, 318 365 M 133 585 C 193 585, 958 365, 1058 365 M 133 585 C 193 585, 588 540, 688 540 M 133 585 C 193 585, 958 540, 1058 540 M 133 585 C 193 585, 218 715, 318 715 M 133 585 C 193 585, 588 715, 688 715 M 133 585 C 193 585, 958 715, 1058 715 M 133 585 C 193 585, 218 890, 318 890" fill="none" stroke="#9aaab4" stroke-width="1.15" opacity="0.38"/>
-<path d="M 183 870 C 243 870, 218 365, 318 365 M 183 870 C 243 870, 588 365, 688 365 M 183 870 C 243 870, 958 365, 1058 365 M 183 870 C 243 870, 588 540, 688 540 M 183 870 C 243 870, 958 540, 1058 540" fill="none" stroke="#9aaab4" stroke-width="1.15" opacity="0.38"/>
-<path d="M 1412 375 C 1352 375, 1012 190, 912 190 M 1412 375 C 1352 375, 1382 190, 1282 190 M 1412 375 C 1352 375, 642 365, 542 365 M 1412 375 C 1352 375, 1012 365, 912 365 M 1412 375 C 1352 375, 642 540, 542 540 M 1412 375 C 1352 375, 1012 540, 912 540 M 1412 375 C 1352 375, 1382 540, 1282 540 M 1412 375 C 1352 375, 642 715, 542 715" fill="none" stroke="#9aaab4" stroke-width="1.15" opacity="0.38"/>
-<path d="M 1412 820 C 1352 820, 1382 715, 1282 715 M 1412 820 C 1352 820, 642 890, 542 890" fill="none" stroke="#9aaab4" stroke-width="1.15" opacity="0.38"/>
-<g stroke="#173b53" stroke-width="3" fill="none" stroke-linecap="round"><circle cx="95" cy="255" r="17" fill="#fff"/><path d="M 95 272 L 95 336 M 63 298 L 127 298 M 95 336 L 69 376 M 95 336 L 121 376"/></g><text x="95" y="404" font-family="Arial, sans-serif" font-size="17" font-weight="bold" text-anchor="middle" fill="#173b53">Proprietário(a)</text>
-<g stroke="#173b53" stroke-width="3" fill="none" stroke-linecap="round"><circle cx="95" cy="540" r="17" fill="#fff"/><path d="M 95 557 L 95 621 M 63 583 L 127 583 M 95 621 L 69 661 M 95 621 L 121 661"/></g><text x="95" y="689" font-family="Arial, sans-serif" font-size="17" font-weight="bold" text-anchor="middle" fill="#173b53">Gerente</text>
-<g stroke="#173b53" stroke-width="3" fill="none" stroke-linecap="round"><circle cx="145" cy="825" r="17" fill="#fff"/><path d="M 145 842 L 145 906 M 113 868 L 177 868 M 145 906 L 119 946 M 145 906 L 171 946"/></g><text x="145" y="974" font-family="Arial, sans-serif" font-size="17" font-weight="bold" text-anchor="middle" fill="#173b53">Vendedor(a) / Atendente</text>
-<g stroke="#173b53" stroke-width="3" fill="none" stroke-linecap="round"><circle cx="1450" cy="330" r="17" fill="#fff"/><path d="M 1450 347 L 1450 411 M 1418 373 L 1482 373 M 1450 411 L 1424 451 M 1450 411 L 1476 451"/></g><text x="1450" y="479" font-family="Arial, sans-serif" font-size="17" font-weight="bold" text-anchor="middle" fill="#173b53">Estoquista / Repositor(a)</text>
-<g stroke="#173b53" stroke-width="3" fill="none" stroke-linecap="round"><circle cx="1450" cy="775" r="17" fill="#fff"/><path d="M 1450 792 L 1450 856 M 1418 818 L 1482 818 M 1450 856 L 1424 896 M 1450 856 L 1476 896"/></g><text x="1450" y="924" font-family="Arial, sans-serif" font-size="17" font-weight="bold" text-anchor="middle" fill="#173b53">Financeiro</text>
-<path d="M 800 767 Q 615 770 430 663 M 800 767 Q 800 857 800 838 M 800 767 Q 985 857 1170 838" fill="none" stroke="#137d75" stroke-width="2.2" stroke-dasharray="8 6" marker-end="url(#arrow)"/>
-<g font-family="Arial, sans-serif" text-anchor="middle"><g fill="#eaf3f9" stroke="#245b78" stroke-width="2.3">
-<ellipse cx="430" cy="190" rx="158" ry="60"/><ellipse cx="800" cy="190" rx="158" ry="60"/><ellipse cx="1170" cy="190" rx="158" ry="60"/>
-<ellipse cx="430" cy="365" rx="158" ry="60"/><ellipse cx="800" cy="365" rx="158" ry="60"/><ellipse cx="1170" cy="365" rx="158" ry="60"/>
-<ellipse cx="430" cy="540" rx="158" ry="60"/><ellipse cx="800" cy="540" rx="158" ry="60"/><ellipse cx="1170" cy="540" rx="158" ry="60"/>
-<ellipse cx="430" cy="715" rx="158" ry="60"/><ellipse cx="800" cy="715" rx="158" ry="60"/><ellipse cx="1170" cy="715" rx="158" ry="60"/>
-<ellipse cx="430" cy="890" rx="158" ry="60"/><ellipse cx="800" cy="890" rx="158" ry="60"/><ellipse cx="1170" cy="890" rx="158" ry="60"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="850" viewBox="0 0 1400 850" role="img" aria-label="Visão geral dos casos de uso divididos em cinco módulos">
+<rect width="1400" height="850" fill="#ffffff"/>
+<text x="700" y="55" text-anchor="middle" font-family="Arial,sans-serif" font-size="30" font-weight="bold" fill="#173b53">Sistema de Controle de Estoque para Lojas de Roupas</text>
+<text x="700" y="88" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" fill="#52636f">Diagrama completo organizado em cinco visões funcionais · 15 casos de uso · 5 atores diretos</text>
+<g font-family="Arial,sans-serif">
+<rect x="130" y="140" width="1140" height="112" rx="18" fill="#f1f7fb" stroke="#245b78" stroke-width="2"/><circle cx="195" cy="196" r="30" fill="#28668a"/><text x="195" y="203" fill="#fff" font-size="19" text-anchor="middle" font-weight="bold">01</text><text x="255" y="185" fill="#173b53" font-size="23" font-weight="bold">Cadastro e abertura</text><text x="255" y="219" fill="#52636f" font-size="17">UC01 Cadastro de produtos · UC02 Locais físicos · UC03 Estoque inicial</text>
+<rect x="130" y="278" width="1140" height="112" rx="18" fill="#f2f8f6" stroke="#245b78" stroke-width="2"/><circle cx="195" cy="334" r="30" fill="#2b8a72"/><text x="195" y="341" fill="#fff" font-size="19" text-anchor="middle" font-weight="bold">02</text><text x="255" y="323" fill="#173b53" font-size="23" font-weight="bold">Consulta e atendimento</text><text x="255" y="357" fill="#52636f" font-size="17">UC04 Disponibilidade · UC05 Localização · UC06 Venda ou saída</text>
+<rect x="130" y="416" width="1140" height="112" rx="18" fill="#fbf7ef" stroke="#245b78" stroke-width="2"/><circle cx="195" cy="472" r="30" fill="#bc822a"/><text x="195" y="479" fill="#fff" font-size="19" text-anchor="middle" font-weight="bold">03</text><text x="255" y="461" fill="#173b53" font-size="23" font-weight="bold">Movimentações e alertas</text><text x="255" y="495" fill="#52636f" font-size="17">UC07 Entrada/reposição · UC08 Transferência · UC09 Alerta de estoque crítico</text>
+<rect x="130" y="554" width="1140" height="112" rx="18" fill="#f7f4fb" stroke="#245b78" stroke-width="2"/><circle cx="195" cy="610" r="30" fill="#7a5ca5"/><text x="195" y="617" fill="#fff" font-size="19" text-anchor="middle" font-weight="bold">04</text><text x="255" y="599" fill="#173b53" font-size="23" font-weight="bold">Fechamento e acurácia</text><text x="255" y="633" fill="#52636f" font-size="17">UC10 Contagem física · UC11 Fechamento · UC14 Comparação · UC15 Score</text>
+<rect x="130" y="692" width="1140" height="112" rx="18" fill="#fbf3f5" stroke="#245b78" stroke-width="2"/><circle cx="195" cy="748" r="30" fill="#b05a70"/><text x="195" y="755" fill="#fff" font-size="19" text-anchor="middle" font-weight="bold">05</text><text x="255" y="737" fill="#173b53" font-size="23" font-weight="bold">Relatórios e histórico</text><text x="255" y="771" fill="#52636f" font-size="17">UC12 Relatórios e Score de Acurácia · UC13 Histórico de movimentações</text>
 </g>
-<g fill="#137d75" font-size="14" font-weight="bold">
-<text x="430" y="170">UC01</text><text x="800" y="170">UC02</text><text x="1170" y="170">UC03</text><text x="430" y="345">UC04</text><text x="800" y="345">UC05</text><text x="1170" y="345">UC06</text><text x="430" y="520">UC07</text><text x="800" y="520">UC08</text><text x="1170" y="520">UC09</text><text x="430" y="695">UC10</text><text x="800" y="695">UC11</text><text x="1170" y="695">UC12</text><text x="430" y="870">UC13</text><text x="800" y="870">UC14</text><text x="1170" y="870">UC15</text>
-</g>
-<g fill="#172732" font-size="17">
-<text x="430" y="194">Cadastrar produtos e variações</text><text x="430" y="217">(modelo, cor e tamanho)</text>
-<text x="800" y="194">Configurar locais físicos</text><text x="800" y="217">da loja</text>
-<text x="1170" y="194">Registrar estoque inicial</text><text x="1170" y="217">(abertura do expediente)</text>
-<text x="430" y="369">Consultar disponibilidade</text><text x="430" y="392">por modelo, cor e tamanho</text>
-<text x="800" y="369">Consultar localização</text><text x="800" y="392">física da peça</text>
-<text x="1170" y="369">Registrar venda ou</text><text x="1170" y="392">saída de peça</text>
-<text x="430" y="544">Registrar entrada ou</text><text x="430" y="567">reposição de peça</text>
-<text x="800" y="544">Transferir peça entre</text><text x="800" y="567">locais da loja</text>
-<text x="1170" y="544">Receber alerta de estoque</text><text x="1170" y="567">baixo / última unidade</text>
-<text x="430" y="719">Registrar contagem</text><text x="430" y="742">física do estoque</text>
-<text x="800" y="719">Realizar fechamento</text><text x="800" y="742">diário do estoque</text>
-<text x="1170" y="719">Consultar relatórios e</text><text x="1170" y="742">Score de Acurácia</text>
-<text x="430" y="894">Consultar histórico de</text><text x="430" y="917">movimentações</text>
-<text x="800" y="894">Comparar saldo registrado</text><text x="800" y="917">com contagem física</text>
-<text x="1170" y="894">Calcular Score</text><text x="1170" y="917">de Acurácia</text>
-</g></g>
-<line x1="285" y1="1015" x2="360" y2="1015" stroke="#9aaab4" stroke-width="2"/><text x="372" y="1021" font-family="Arial, sans-serif" font-size="14" fill="#52636f">Associação ator–caso de uso</text>
-<line x1="700" y1="1015" x2="775" y2="1015" stroke="#137d75" stroke-width="2" stroke-dasharray="8 6" marker-end="url(#arrow)"/><text x="790" y="1021" font-family="Arial, sans-serif" font-size="14" fill="#52636f">&lt;&lt;include&gt;&gt; comportamento obrigatório incluído</text>
 </svg>

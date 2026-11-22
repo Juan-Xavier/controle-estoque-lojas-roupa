@@ -6,27 +6,31 @@ O sistema, disponibilizado em versão web e aplicativo mobile, apoia o controle 
 
 Os dois canais (web e mobile) são formas de acesso ao mesmo sistema; por isso, não foram desenhados como atores separados.
 
-## 2. Atores do sistema
+## 2. Atores e objetivos
 
-| Ator | Responsabilidade / objetivo no sistema |
+| Ator | Objetivo no sistema |
 |---|---|
-| Proprietário(a) | Acompanhar relatórios e o Score de Acurácia da loja. |
-| Gerente | Coordenar o controle do estoque, cadastrar produtos e locais, acompanhar a operação, realizar/acompanhar o fechamento e consultar relatórios e histórico. |
-| Vendedor(a) / Atendente | Consultar disponibilidade e localização das peças, registrar vendas/saídas e acompanhar alertas de estoque crítico. |
-| Estoquista / Repositor(a) | Registrar o estoque inicial, entradas/reposições, transferências, localizações e contagens físicas. |
-| Financeiro | Consultar relatórios e histórico para apoiar conferências e identificação de divergências. |
+| Proprietário(a) | Acompanhar a confiabilidade do inventário por relatórios, indicadores e Score de Acurácia. |
+| Gerente | Coordenar o estoque, manter produtos e locais cadastrados, acompanhar movimentações e alertas, fechar o dia e consultar resultados. |
+| Vendedor(a) / Atendente | Verificar rapidamente modelo, cor e tamanho disponíveis, localizar peças e registrar vendas/saídas. |
+| Estoquista / Repositor(a) | Registrar estoque inicial, entradas, reposições, transferências, locais e contagens físicas. |
+| Financeiro | Consultar relatórios e histórico para apoiar conferências de movimentações e divergências. |
 
 ### Stakeholders que não aparecem como atores diretos
 
 A cliente da loja é beneficiária indireta: recebe atendimento mais rápido, mas a descrição atual não prevê que ela utilize o software. O fornecedor também é beneficiário indireto, pois não há portal ou integração direta prevista para ele. O responsável pela TI é stakeholder de apoio à consistência entre web e mobile, mas a proposta não define funcionalidades administrativas específicas para sua interação direta. Esses papéis podem tornar-se atores em versões futuras, caso sejam adicionadas funcionalidades próprias.
 
-## 3. Diagrama
+## 3. Diagrama completo
 
-O arquivo-fonte editável em PlantUML está em [Diagrama_Casos_de_Uso_Controle_Estoque.puml](Diagrama_Casos_de_Uso_Controle_Estoque.puml). A imagem SVG abaixo é uma representação do mesmo diagrama.
+Para evitar sobreposição e facilitar a leitura, o diagrama foi dividido em cinco visões funcionais. Juntas, elas representam os 15 casos de uso do sistema.
 
-![Diagrama de Casos de Uso](Diagrama_Casos_de_Uso_Controle_Estoque.svg)
+Consulte a [visão geral dos módulos](Diagrama_Casos_de_Uso_Controle_Estoque.svg) e os [cinco diagramas separados](casos-de-uso/README.md). O arquivo-fonte editável é [Diagrama_Casos_de_Uso_Controle_Estoque.puml](Diagrama_Casos_de_Uso_Controle_Estoque.puml).
 
-## 4. Catálogo de casos de uso
+## 4. Cenários principais e alternativos
+
+Os passos principais e as condições alternativas dos 15 casos estão descritos em [Cenários Principais e Alternativos](Cenarios_Principais_e_Alternativos.md). Cada alternativa identifica sua condição de ativação e a resposta esperada do sistema.
+
+## 5. Catálogo de casos de uso
 
 | ID | Caso de uso | Ator(es) principal(is) | Resultado esperado |
 |---|---|---|---|
@@ -46,7 +50,7 @@ O arquivo-fonte editável em PlantUML está em [Diagrama_Casos_de_Uso_Controle_E
 | UC14 | Comparar saldo registrado com contagem física | Incluído por UC11 | O sistema identifica divergências entre registro e contagem. |
 | UC15 | Calcular Score de Acurácia | Incluído por UC11 | O sistema apresenta a acurácia do inventário conforme fórmula a ser definida e validada. |
 
-## 5. Descrição completa de um caso de uso (um aluno)
+## 6. Descrição completa de um caso de uso (um aluno)
 
 A descrição abaixo é um caso de uso principal, escolhido por ser central para a confiabilidade do estoque. Cada integrante do grupo deve ficar responsável por apenas um caso de uso completo; os demais casos do catálogo podem ser distribuídos entre os outros integrantes, sem duplicar a descrição.
 
@@ -113,7 +117,7 @@ A descrição abaixo é um caso de uso principal, escolhido por ser central para
 - **Frequência:** alta, pois ocorre ao longo do expediente sempre que uma peça é vendida ou retirada.
 - **Importância:** essencial (*Must Have* na priorização inicial), pois sem atualizar as saídas a consulta de disponibilidade perde confiabilidade.
 
-## 6. Outros casos de uso grandes que podem ser distribuídos entre os demais alunos
+## 7. Outros casos de uso grandes que podem ser distribuídos entre os demais alunos
 
 Para cumprir a regra de um caso completo por aluno, os seguintes casos são boas opções para os outros integrantes:
 
@@ -124,7 +128,7 @@ Para cumprir a regra de um caso completo por aluno, os seguintes casos são boas
 
 Cada integrante deve escolher um caso diferente e desenvolver a sua própria especificação completa.
 
-## 7. Premissas e pontos a validar
+## 8. Premissas e pontos a validar
 
 - Quais perfis podem registrar vendas, saídas, ajustes, transferências e contagens.
 - Se as vendas serão registradas manualmente ou integradas a um PDV.

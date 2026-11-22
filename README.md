@@ -95,8 +95,12 @@ Sempre que houver atualização na branch `main`, o workflow executará novament
 
 ## Modelagem de Casos de Uso
 
-- [Diagrama visual de casos de uso (SVG)](docs/Diagrama_Casos_de_Uso_Controle_Estoque.svg)
-- [Fonte editável PlantUML](docs/Diagrama_Casos_de_Uso_Controle_Estoque.puml)
-- [Catálogo e descrição completa do UC06 — Registrar venda ou saída de peça](docs/Descricao_Casos_de_Uso_Controle_Estoque.md)
+O diagrama foi dividido em cinco visões funcionais para reduzir cruzamentos e melhorar a leitura:
 
-O documento inclui os atores, os casos de uso identificados, os relacionamentos `<<include>>`, os fluxos principal e alternativos do UC06 e os pontos que ainda precisam ser validados pelo grupo.
+- [Visão geral dos cinco módulos (SVG)](docs/Diagrama_Casos_de_Uso_Controle_Estoque.svg)
+- [Índice com os cinco diagramas separados](docs/casos-de-uso/README.md)
+- [Fonte editável PlantUML](docs/Diagrama_Casos_de_Uso_Controle_Estoque.puml)
+- [Atores, catálogo e descrição integral do UC06](docs/Descricao_Casos_de_Uso_Controle_Estoque.md)
+- [Cenários principais e alternativos dos 15 casos de uso](docs/Cenarios_Principais_e_Alternativos.md)
+
+A documentação identifica atores e objetivos, apresenta os diagramas e descreve cenários principais e alternativas, com suas condições de ativação e respostas do sistema.

@@ -1,76 +1,120 @@
-@startuml
+' Diagrama de Casos de Uso — cinco visões funcionais.
+' Cada bloco @startuml/@enduml gera um diagrama independente.
+
+@startuml UC01_Cadastro_Abertura
 left to right direction
-skinparam packageStyle rectangle
+skinparam linetype ortho
 skinparam shadowing false
-skinparam usecase {
-  BackgroundColor #F7FBFF
-  BorderColor #245B78
-  ArrowColor #425466
-}
-skinparam actor {
-  BorderColor #173B53
-  FontColor #173B53
-}
-skinparam rectangle {
-  BorderColor #173B53
-  FontColor #173B53
-}
-
-actor "Proprietário(a)" as Proprietario
-actor "Gerente" as Gerente
-actor "Vendedor(a) / Atendente" as Vendedor
-actor "Estoquista / Repositor(a)" as Estoquista
-actor "Financeiro" as Financeiro
-
+skinparam packageStyle rectangle
+skinparam usecase { BackgroundColor #EAF3F8; BorderColor #245B78; FontColor #173B53 }
+skinparam actor { BorderColor #245B78; FontColor #173B53 }
+title 01 — Cadastro e abertura
+actor "Gerente" as G1
+actor "Estoquista / Repositor(a)" as E1
 rectangle "Sistema de Controle de Estoque para Lojas de Roupas" {
-  usecase "Cadastrar produtos e\nvariações (modelo, cor e tamanho)" as UC01
-  usecase "Configurar locais físicos\nda loja" as UC02
-  usecase "Registrar estoque inicial\n(abertura do expediente)" as UC03
-  usecase "Consultar disponibilidade\npor modelo, cor e tamanho" as UC04
-  usecase "Consultar localização\nfísica da peça" as UC05
-  usecase "Registrar venda ou\nsaída de peça" as UC06
-  usecase "Registrar entrada ou\nreposição de peça" as UC07
-  usecase "Transferir peça entre\nlocais da loja" as UC08
-  usecase "Receber alerta de estoque\nbaixo / última unidade" as UC09
-  usecase "Registrar contagem\nfísica do estoque" as UC10
-  usecase "Realizar fechamento\ndiário do estoque" as UC11
-  usecase "Consultar relatórios e\nScore de Acurácia" as UC12
-  usecase "Consultar histórico de\nmovimentações" as UC13
-  usecase "Comparar saldo registrado\ncom contagem física" as UC14
-  usecase "Calcular Score\nde Acurácia" as UC15
+  usecase "UC01\nCadastrar produtos e variações" as UC01
+  usecase "UC02\nConfigurar locais físicos" as UC02
+  usecase "UC03\nRegistrar estoque inicial" as UC03
 }
+G1 -- UC01
+G1 -- UC02
+G1 -- UC03
+E1 -- UC02
+E1 -- UC03
+@enduml
 
-' Associações entre atores e casos de uso
-Proprietario -- UC12
-Gerente -- UC01
-Gerente -- UC02
-Gerente -- UC03
-Gerente -- UC04
-Gerente -- UC06
-Gerente -- UC08
-Gerente -- UC09
-Gerente -- UC10
-Gerente -- UC11
-Gerente -- UC12
-Gerente -- UC13
-Vendedor -- UC04
-Vendedor -- UC05
-Vendedor -- UC06
-Vendedor -- UC08
-Vendedor -- UC09
-Estoquista -- UC02
-Estoquista -- UC03
-Estoquista -- UC04
-Estoquista -- UC05
-Estoquista -- UC07
-Estoquista -- UC08
-Estoquista -- UC09
-Estoquista -- UC10
-Financeiro -- UC12
-Financeiro -- UC13
+@startuml UC02_Consulta_Atendimento
+left to right direction
+skinparam linetype ortho
+skinparam shadowing false
+skinparam packageStyle rectangle
+skinparam usecase { BackgroundColor #EAF3F8; BorderColor #245B78; FontColor #173B53 }
+skinparam actor { BorderColor #245B78; FontColor #173B53 }
+title 02 — Consulta e atendimento
+actor "Vendedor(a) / Atendente" as V2
+actor "Gerente" as G2
+actor "Estoquista / Repositor(a)" as E2
+rectangle "Sistema de Controle de Estoque para Lojas de Roupas" {
+  usecase "UC04\nConsultar disponibilidade" as UC04
+  usecase "UC05\nConsultar localização física" as UC05
+  usecase "UC06\nRegistrar venda ou saída" as UC06
+}
+V2 -- UC04
+V2 -- UC05
+V2 -- UC06
+G2 -- UC04
+G2 -- UC06
+E2 -- UC04
+E2 -- UC05
+@enduml
 
-' O fechamento inclui obrigatoriamente contagem, comparação e cálculo do score
+@startuml UC03_Movimentacoes_Alertas
+left to right direction
+skinparam linetype ortho
+skinparam shadowing false
+skinparam packageStyle rectangle
+skinparam usecase { BackgroundColor #EAF3F8; BorderColor #245B78; FontColor #173B53 }
+skinparam actor { BorderColor #245B78; FontColor #173B53 }
+title 03 — Movimentações e alertas
+actor "Vendedor(a) / Atendente" as V3
+actor "Gerente" as G3
+actor "Estoquista / Repositor(a)" as E3
+rectangle "Sistema de Controle de Estoque para Lojas de Roupas" {
+  usecase "UC07\nRegistrar entrada ou reposição" as UC07
+  usecase "UC08\nTransferir peça entre locais" as UC08
+  usecase "UC09\nReceber alerta de estoque baixo" as UC09
+}
+E3 -- UC07
+V3 -- UC08
+G3 -- UC08
+E3 -- UC08
+V3 -- UC09
+G3 -- UC09
+E3 -- UC09
+@enduml
+
+@startuml UC04_Fechamento_Acuracia
+left to right direction
+skinparam linetype ortho
+skinparam shadowing false
+skinparam packageStyle rectangle
+skinparam usecase { BackgroundColor #EAF3F8; BorderColor #245B78; FontColor #173B53 }
+skinparam actor { BorderColor #245B78; FontColor #173B53 }
+title 04 — Fechamento e acurácia
+actor "Gerente" as G4
+actor "Estoquista / Repositor(a)" as E4
+rectangle "Sistema de Controle de Estoque para Lojas de Roupas" {
+  usecase "UC10\nRegistrar contagem física" as UC10
+  usecase "UC11\nRealizar fechamento diário" as UC11
+  usecase "UC14\nComparar saldo e contagem" as UC14
+  usecase "UC15\nCalcular Score de Acurácia" as UC15
+}
+G4 -- UC10
+E4 -- UC10
+G4 -- UC11
 UC11 ..> UC10 : <<include>>
 UC11 ..> UC14 : <<include>>
 UC11 ..> UC15 : <<include>>
+@enduml
+
+@startuml UC05_Relatorios_Historico
+left to right direction
+skinparam linetype ortho
+skinparam shadowing false
+skinparam packageStyle rectangle
+skinparam usecase { BackgroundColor #EAF3F8; BorderColor #245B78; FontColor #173B53 }
+skinparam actor { BorderColor #245B78; FontColor #173B53 }
+title 05 — Relatórios e histórico
+actor "Proprietário(a)" as O5
+actor "Gerente" as G5
+actor "Financeiro" as F5
+rectangle "Sistema de Controle de Estoque para Lojas de Roupas" {
+  usecase "UC12\nConsultar relatórios e Score" as UC12
+  usecase "UC13\nConsultar histórico de movimentações" as UC13
+}
+O5 -- UC12
+G5 -- UC12
+G5 -- UC13
+F5 -- UC12
+F5 -- UC13
 @enduml
