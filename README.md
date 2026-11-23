@@ -8,7 +8,6 @@
 - **Página do projeto (GitHub Pages):** https://juan-xavier.github.io/controle-estoque-lojas-roupa/
 - **Página inicial:** [index.html](index.html)
 
-> O repositório está criado e os arquivos estão sendo mantidos na branch `main`. Para disponibilizar a página, ative o GitHub Pages em **Settings → Pages → Deploy from a branch → main → /(root) → Save**. O endereço acima é o endereço esperado após a publicação.
 
 ## 1. Proposta inicial informal
 
