@@ -103,3 +103,12 @@ O diagrama foi dividido em cinco visões funcionais para reduzir cruzamentos e m
 - [Cenários principais e alternativos dos 15 casos de uso](docs/Cenarios_Principais_e_Alternativos.md)
 
 A documentação identifica atores e objetivos, apresenta os diagramas e descreve cenários principais e alternativas, com suas condições de ativação e respostas do sistema.
+
+## Gestão de Projeto
+
+Planejamento do MVP (54 dias úteis, de 08/03/2027 a 24/05/2027; BAC de R$ 55.143,00):
+
+- [Documento consolidado: escopo, EAP, rede CPM, baseline, recursos e BAC](docs/gestao-projeto/README.md)
+- [Planilha editável (fonte de todos os números)](docs/gestao-projeto/Planejamento_Projeto_Controle_Estoque_Roupas.xlsx)
+- [EAP em árvore (PNG)](docs/gestao-projeto/EAP_arvore.png)
+- [Diagrama de rede CPM (PNG)](docs/gestao-projeto/Diagrama_de_Rede_CPM.png) · [fonte Graphviz](docs/gestao-projeto/rede.dot)
